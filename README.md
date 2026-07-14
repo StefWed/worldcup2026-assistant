@@ -55,3 +55,13 @@ The app builds the vector index fresh from whatever PDF you upload each
 session — so you can also swap in a different team-profile PDF without
 touching any code, as long as it follows the same format (one team per page,
 team name as the first line of each page).
+
+
+## About `team_stats.csv`
+
+The statistics in this file (`win_rate`, `avg_goals`, `goals_conceded`) are
+**synthesized/illustrative values**, not real tournament data. They exist to
+demonstrate the `analyze_match` tool's simple scoring model, not to make an
+accurate prediction claim. If you want real predictive value, replace this
+file with actual team statistics from a reliable source (e.g. FIFA rankings,
+historical qualifying results, or a proper analytics provider).
