@@ -1,0 +1,7 @@
+streamlit
+openai
+langchain-community
+pypdf
+faiss-cpu
+numpy
+duckduckgo-search
