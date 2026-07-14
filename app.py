@@ -11,8 +11,7 @@ import tempfile
 import streamlit as st
 
 # Make secrets available as env vars before config.py builds the OpenAI client.
-if "OPENAI_API_KEY" in st.secrets:
-    os.environ["OPENAI_API_KEY"] = st.secrets["OPENAI_API_KEY"]
+client = OpenAI(api_key=os.environ.get("OPENAI_API_KEY"))
 
 from rag import run_pipeline
 from tools import init_document_search
