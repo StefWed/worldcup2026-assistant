@@ -9,17 +9,13 @@ import os
 import tempfile
 
 import streamlit as st
-
-# Make secrets available as env vars before config.py builds the OpenAI client.
-client = OpenAI(api_key=os.environ.get("OPENAI_API_KEY"))
-
 from rag import run_pipeline
 from tools import init_document_search
 from agent import run_agent
 
-st.set_page_config(page_title="World Cup Scout Agent", page_icon="⚽", layout="wide")
+st.set_page_config(page_title="World Cup Assistant", page_icon="⚽", layout="wide")
 
-st.title("⚽ World Cup Team Scout Agent")
+st.title("⚽ World Cup Assistant")
 st.caption(
     "Ask about team playing styles, current tournament news, or get a simple "
     "match prediction. The agent decides which tool to use."
